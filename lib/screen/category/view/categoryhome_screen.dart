@@ -37,15 +37,20 @@ class _CateforyScrenState extends State<CateforyScren> {
                     crossAxisCount: 3,mainAxisExtent: 200),
                 itemCount: providerw!.wallpaperModel!.hitsList!.length,
                 itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        "${providerw!.wallpaperModel!.hitsList![index].largeImageURL}",
-                        height: 200,
-                        width: 150,
-                        fit: BoxFit.cover,
+                  return InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'details',arguments: providerw!.wallpaperModel!.hitsList![index].largeImageURL);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          "${providerw!.wallpaperModel!.hitsList![index].largeImageURL}",
+                          height: 200,
+                          width: 150,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   );
