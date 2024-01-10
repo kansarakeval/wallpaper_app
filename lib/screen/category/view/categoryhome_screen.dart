@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wallpaper_app/screen/wallpaper/provider/wallpaper_provider.dart';
+import 'package:wallpaper_app/screen/category/provider/category_provider.dart';
 
-class WallpaperScreen extends StatefulWidget {
-  const WallpaperScreen({super.key});
+class CateforyScren extends StatefulWidget {
+  const CateforyScren({super.key});
 
   @override
-  State<WallpaperScreen> createState() => _WallpaperScreenState();
+  State<CateforyScren> createState() => _CateforyScrenState();
 }
 
-class _WallpaperScreenState extends State<WallpaperScreen> {
-  WallpaperProvider? providerr;
-  WallpaperProvider? providerw;
-
+class _CateforyScrenState extends State<CateforyScren> {
+  CategoryProvider? providerr;
+  CategoryProvider? providerw;
   @override
   Widget build(BuildContext context) {
-    providerr = context.read<WallpaperProvider>();
-    providerw = context.watch<WallpaperProvider>();
+    providerr = context.read<CategoryProvider>();
+    providerw = context.watch<CategoryProvider>();
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -28,7 +27,7 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
           backgroundColor: Colors.black,
         ),
         body: FutureBuilder(
-          future: providerr!.getWallpaperData(),
+          future: providerr!.getCategoryData(),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Text("${snapshot.error}");

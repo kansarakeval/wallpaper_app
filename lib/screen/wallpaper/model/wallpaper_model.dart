@@ -1,15 +1,15 @@
 class WallpaperModel{
   int? total,totalHits;
-  List<HitsModel>? hitsModel=[];
+  List<HitsModel>? hitsList=[];
 
-  WallpaperModel({this.total, this.totalHits, this.hitsModel});
+  WallpaperModel({this.total, this.totalHits, this.hitsList});
   
   factory WallpaperModel.mapToModel(Map m1){
     List l1=m1['hits'];
     return WallpaperModel(
       total: m1['total'],
       totalHits: m1['totalHits'],
-      hitsModel: l1.map((e) => HitsModel.mapToModel(e)).toList(),
+      hitsList: l1.map((e) => HitsModel.mapToModel(e)).toList(),
     );
   }
 }

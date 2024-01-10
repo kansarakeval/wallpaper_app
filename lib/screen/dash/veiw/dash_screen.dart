@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:wallpaper_app/screen/category/view/category_screen.dart';
 import 'package:wallpaper_app/screen/dash/provider/dash_provider.dart';
 import 'package:wallpaper_app/screen/wallpaper/veiw/wallpaper_screen.dart';
 
@@ -16,7 +17,7 @@ class _DashScreenState extends State<DashScreen> {
 
   List<Widget> dashList = [
     WallpaperScreen(),
-    WallpaperScreen(),
+    CategoryScreen(),
     WallpaperScreen(),
     WallpaperScreen(),
   ];
@@ -34,31 +35,31 @@ class _DashScreenState extends State<DashScreen> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(30),
               child: BottomNavigationBar(
-                fixedColor: Colors.black,
+                fixedColor: Colors.white,
                 currentIndex: providerw!.dashIndex,
                 items: const [
                   BottomNavigationBarItem(
                       icon: Icon(
                         Icons.home_outlined,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       label: "home",),
                   BottomNavigationBarItem(
                       icon: Icon(
                         Icons.view_comfy_alt,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       label: "category"),
                   BottomNavigationBarItem(
                       icon: Icon(
                         Icons.search,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       label: "search"),
                   BottomNavigationBarItem(
                       icon: Icon(
                         Icons.settings_outlined,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                       label: "setting"),
                 ],
