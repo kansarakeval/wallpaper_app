@@ -36,6 +36,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 Navigator.pushNamed(context, 'categoryhome');
               },
               child: Stack(
+                alignment: Alignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),

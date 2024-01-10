@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wallpaper_app/screen/category/view/category_screen.dart';
 import 'package:wallpaper_app/screen/dash/provider/dash_provider.dart';
+import 'package:wallpaper_app/screen/search/veiw/search_screen.dart';
 import 'package:wallpaper_app/screen/wallpaper/veiw/wallpaper_screen.dart';
 
 class DashScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _DashScreenState extends State<DashScreen> {
   List<Widget> dashList = [
     WallpaperScreen(),
     CategoryScreen(),
-    WallpaperScreen(),
+    SearchScreen(),
     WallpaperScreen(),
   ];
 
@@ -39,24 +40,28 @@ class _DashScreenState extends State<DashScreen> {
                 currentIndex: providerw!.dashIndex,
                 items: const [
                   BottomNavigationBarItem(
+                    backgroundColor: Colors.red,
                       icon: Icon(
                         Icons.home_outlined,
                         color: Colors.white,
                       ),
                       label: "home",),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.red,
                       icon: Icon(
                         Icons.view_comfy_alt,
                         color: Colors.white,
                       ),
                       label: "category"),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.red,
                       icon: Icon(
                         Icons.search,
                         color: Colors.white,
                       ),
                       label: "search"),
                   BottomNavigationBarItem(
+                      backgroundColor: Colors.red,
                       icon: Icon(
                         Icons.settings_outlined,
                         color: Colors.white,

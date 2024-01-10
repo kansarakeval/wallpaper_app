@@ -15,7 +15,9 @@ class CategoryProvider with ChangeNotifier {
 
   //category
   WallpaperModel? wallpaperModel;
+
   String selectedcategory="nature";
+
   void changCategory(String category){
     selectedcategory=category;
     notifyListeners();

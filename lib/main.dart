@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wallpaper_app/screen/category/provider/category_provider.dart';
 import 'package:wallpaper_app/screen/dash/provider/dash_provider.dart';
+import 'package:wallpaper_app/screen/search/provider/search_provider.dart';
 import 'package:wallpaper_app/screen/wallpaper/provider/wallpaper_provider.dart';
 import 'package:wallpaper_app/util/app_routes.dart';
 
@@ -16,6 +17,9 @@ void main() {
       ),
       ChangeNotifierProvider(
         create: (context) => CategoryProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => SearchProvider(),
       ),
     ],
     child: MaterialApp(
